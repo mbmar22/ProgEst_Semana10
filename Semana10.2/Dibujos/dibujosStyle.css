@@ -1,0 +1,27 @@
+.center {
+  text-align: center;
+  color: #36415a;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    width: 1000px;
+}
+
+centrar{
+    display: flex;
+    justify-content: center;
+}
+
+h4{
+    text-indent: 30px;
+    color: #36415a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #f0ffe1;
+}
