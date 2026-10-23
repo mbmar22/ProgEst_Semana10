@@ -36,10 +36,12 @@
       Crea el <code_Format>archivo lista_enlazada.py</code_Format>. Agrega esta función. Cada llamada produce un nodo independiente.
     </p>
 
-    <centrar>
+    <div class="code-container">
       <pre class="code-box"><code>def crear_nodo(dato):
       return {"dato": dato, "siguiente": None}</code></pre>
-    </centrar>
+    </div>
+
+    <br>
 
     <centrar>
       <img src = "nodos2.png" alt ="Crear el nodo">
@@ -52,11 +54,18 @@
       Primero conecta el nuevo nodo con la cabeza anterior; después devuelve la nueva cabeza. El orden evita perder el acceso al resto de la lista.
     </p>
 
+      <div class="code-container">
+        <pre class="code-box"><code>def insertar_inicio(cabeza, dato):
+        nuevo = crear_nodo(dato)
+        nuevo["siguiente"] = cabeza
+        return nuevo</code></pre>
+      </div>
+
+      <br>
+
+
     <center>
-      <pre class="code-box"><code>def insertar_inicio(cabeza, dato):
-      nuevo = crear_nodo(dato)
-      nuevo["siguiente"] = cabeza
-      return nuevo</code></pre>
+      <img src="nodos3.png" alt = "Insertar al inicio">
     </center>
 
     <br>
@@ -65,6 +74,24 @@
     <p>
       Si está vacía, el nuevo nodo pasa a ser la cabeza. Si tiene elementos, avanza hasta el último nodo y conecta el nuevo.
     </p>
+  
+    <div class="code-container">
+      <pre class="code-box"><code>def insertar_final(cabeza, dato):
+      nuevo = crear_nodo(dato)
+      if cabeza is None:
+          return nuevo
+      actual = cabeza
+      while actual["siguiente"] is not None:
+          actual = actual["siguiente"]
+      actual["siguiente"] = nuevo
+      return cabeza</code></pre>
+    </div>
+
+    <br>
+
+    <center>
+      <img src="nodos4.png" alt="Insertar al final">
+    </center>
 
     <br>
     
