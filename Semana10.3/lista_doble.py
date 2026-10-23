@@ -41,6 +41,7 @@ def mostrar_atras():
         print(actual["dato"], end = " ↔ " if actual["anterior"] else "\n")
         actual = actual["anterior"]
 
+
 print("\n2. Recorrer hacia adelante y atrás")
 mostrar_adelante()
 mostrar_atras()
@@ -94,4 +95,56 @@ print("\n4. Eliminar por valor")
 print("Eliminado:", eliminar("Catálogo"))
 mostrar_adelante()
 mostrar_atras()
+
+
+
+# Retos de Programación
+print(("\n---- Retos -----").upper())
+print(("\n--- Reto 1 · Buscador bidireccional ---").upper())
+
+def buscar(dato):
+    global cabeza
+    actual = cabeza
+
+    posicion = 0
+
+    while actual is not None:
+        if actual["dato"] == dato:
+            return True
+        actual = actual["siguiente"]
+        posicion += 1
+    
+    return False
+
+print(buscar("Inicio"))
+print(buscar("Catálogo"))
+
+
+
+print(("\n--- Reto 2 · Insertar después de un valor ---").upper())
+
+def insertar_despues(referencia, dato):
+    actual = cabeza
+
+    while actual is not None:
+        if actual["dato"] == referencia:
+            nuevo = crear_nodo(dato)
+
+            nuevo["siguiente"] = actual["siguiente"]
+            actual["siguiente"] = nuevo
+
+            return True
+        
+        actual = actual["siguiente"]
+
+    return False
+
+
+print(insertar_despues("Inicio", "Medio"))
+mostrar_atras() # Averiguar por qué no imprime la lista inversa
+mostrar_adelante()
+
+
+
+print(("\n--- Reto 3 · Historial del navegador ---").upper())
 
