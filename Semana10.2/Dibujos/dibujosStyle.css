@@ -25,3 +25,32 @@ h4{
 body{
     background-color: #f0ffe1;
 }
+
+p{
+    text-indent: 30px;
+    color: #36415a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 30px;
+}
+
+code_format{
+    font-family: monospace;
+    color: #D96868;
+    background-color: #F6E2E9;
+}
+
+hr.dashed{
+    border-top: 3px dashed #bbb;
+}
+
+.code-box {
+    margin-left: 30px;
+    display: inline-block;
+    background-color: #282c34;
+    color: #abb2bf;
+    font-family: Consolas, Monaco, monospace;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #4b5263;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}

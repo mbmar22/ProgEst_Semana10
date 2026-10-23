@@ -13,8 +13,101 @@
     </div>
 
     <h4>1. Comprender los enlaces</h4>
+    <p>
+      Una lista enlazada conecta nodos mediante referencias. <code_Format>cabeza</code_Format> referencia al primer nodo; <code_Format>None</code_Format> indica ausencia de nodo. El último nodo tiene <code_Format>siguiente = None</code_Format>.
+    </p>
     <centrar>
-      <img src="nodos.png" alt="Comprender los enlaces">
+      <img src = "nodos.png" alt = "Comprender los enlaces">
     </centrar>
+    <p>
+      Los diccionarios representan nodos y sus valores guardan referencias a otros diccionarios. Python administra la memoria: aquí no manipulamos direcciones manualmente.
+
+      Una <code_Format>list</code_Format> de Python usa un arreglo dinámico de referencias; no es esta estructura enlazada. Aquí no hay acceso directo por índice: hay que recorrer los enlaces.
+    </p>
+
+
+    <!-- <hr class = "dashed"> -->
+
+
+    <br>
+
+    <h4>2. Crear el nodo</h4>
+    <p>
+      Crea el <code_Format>archivo lista_enlazada.py</code_Format>. Agrega esta función. Cada llamada produce un nodo independiente.
+    </p>
+
+    <centrar>
+      <pre class="code-box"><code>def crear_nodo(dato):
+      return {"dato": dato, "siguiente": None}</code></pre>
+    </centrar>
+
+    <centrar>
+      <img src = "nodos2.png" alt ="Crear el nodo">
+    </centrar>
+
+    <br>
+
+    <h4>3. Insertar al inicio</h4>
+    <p>
+      Primero conecta el nuevo nodo con la cabeza anterior; después devuelve la nueva cabeza. El orden evita perder el acceso al resto de la lista.
+    </p>
+
+    <center>
+      <pre class="code-box"><code>def insertar_inicio(cabeza, dato):
+      nuevo = crear_nodo(dato)
+      nuevo["siguiente"] = cabeza
+      return nuevo</code></pre>
+    </center>
+
+    <br>
+    
+    <h4>4. Insertar al final</h4>
+    <p>
+      Si está vacía, el nuevo nodo pasa a ser la cabeza. Si tiene elementos, avanza hasta el último nodo y conecta el nuevo.
+    </p>
+
+    <br>
+    
+    <h4>5. Recorrer y mostrar</h4>
+    <p>
+      La variable auxiliar <code_Format>actual</code_Format> avanza sin cambiar la cabeza. En una lista vacía se imprime únicamente <code_Format>None</code_Format>.
+    </p>
+
+    <br>
+
+    <h4>6. Buscar un turno</h4>
+    <p>
+      Recorre desde la posición 0. Devuelve la primera posición encontrada o -1 si el nombre no existe.
+    </p>
+
+    <br>
+
+    <h4>7. Eliminar un turno</h4>
+    <p>
+      Distingue lista vacía, eliminación de la cabeza y eliminación de otro nodo. Devuelve una tupla: nueva cabeza y confirmación. Reenlazar el anterior con el siguiente excluye al nodo eliminado.
+    </p>
+
+    <br>
+
+    <h4>8. Contar los nodos</h4>
+    <p>
+      Cuenta recorriendo la estructura. No usa un contador global que pueda quedar desactualizado.
+    </p>
+
+    <br>
+
+    <!--
+    <h4>9. Ejecutar una prueba integrada</h4>
+    <p>
+      Agrega temporalmente estas instrucciones debajo de las funciones. Ejecuta <code_Format>python lista_enlazada.py</code_Format> o ejecuta la celda en Colab.
+    </p>
+
+    <br>
+
+    <h4>10. Construir el menú</h4>
+    <p>
+      Retira las instrucciones de la prueba integrada y añade este bloque después de las funciones. Las funciones de los pasos 4 al 10 más este bloque forman el programa completo.
+    </p>
+-->
   </body>
 </html>
