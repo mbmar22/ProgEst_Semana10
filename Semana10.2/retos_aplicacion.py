@@ -4,6 +4,7 @@
 3. Invertir los enlaces: invierte la lista sin convertirla a una lista de Python ni crear otros nodos. Ana → Luis → Eva debe quedar Eva → Luis → Ana. Comprueba también lista vacía y nodo único.
 Para cada reto entrega el código, dos pruebas y un dibujo de las referencias. Las soluciones de los retos deben ser desarrolladas por el estudiante.'''
 
+
 hola = []
 # Reto 1
 def crear_nodo(dato):
