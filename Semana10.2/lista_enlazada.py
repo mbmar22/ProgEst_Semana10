@@ -1,4 +1,4 @@
-# Mostar lista
+# Mostrar lista
 def mostrar_lista(cabeza):
     actual = cabeza
 
